@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="my-app" ng-controller="c">
+ <p>First Name:  <input type="text" ng-model="fname"></p>
+  <p>Last Name:  <input type="text" ng-model="lname"></p>
+  <h1>You wrote:
+    {{fname +" "+lname}}
+  </h1>
+</div>
+  <script>
+    var app=angular.module('my-app',[])
+
+    app.controller('c',function($scope){
+      $scope.fname="";
+      $scope.lname="";
+    })
+  </script>
+</body>
+</html>
